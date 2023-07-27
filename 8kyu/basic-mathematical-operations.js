@@ -25,3 +25,8 @@ function basicOp(operation, value1, value2) {
         return value1 / value2
     }
 }
+
+console.log('basicOp: ', basicOp('+', 4, 7))
+console.log('basicOp: ', basicOp('-', 15, 18))
+console.log('basicOp: ', basicOp('*', 5, 5))
+console.log('basicOp: ', basicOp('/', 49, 7))
