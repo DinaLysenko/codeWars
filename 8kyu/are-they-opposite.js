@@ -12,18 +12,21 @@
 
 // ✅SOLUTION:
 function isOpposite(s1, s2) {
-    if (s1 === '' && s2 === '' || s1.length !== s2.length) {
+    if ((s1 === '' && s2 === '') || s1.length !== s2.length) {
         return false
     }
+    if (s1.toLowerCase() !== s2.toLowerCase()) return false;
     for (let i = 0; i < s1.length; i++) {
-        for (let j = 0; j < s2.length; j++) {
-            return s1[i] > s2[j] || s1[i] < s2[j];
+        if (s1[i] === s2[i]) {
+            return false;
         }
     }
+    return true;
 }
 
-console.log('isOpposite: ', isOpposite("ab","AB"))
-console.log('isOpposite: ', isOpposite("aB","Ab"))
-console.log('isOpposite: ', isOpposite("aBcd","AbCD"))
-console.log('isOpposite: ', isOpposite("AB","Ab"))
-console.log('isOpposite: ', isOpposite("",""))
+
+console.log('isOpposite: ', isOpposite("ab", "AB"))
+console.log('isOpposite: ', isOpposite("aB", "Ab"))
+console.log('isOpposite: ', isOpposite("aBcd", "AbCD"))
+console.log('isOpposite: ', isOpposite("AB", "Ab"))
+console.log('isOpposite: ', isOpposite("", ""))
